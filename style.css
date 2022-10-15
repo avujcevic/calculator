@@ -2,16 +2,28 @@
     display: flex;
     flex-wrap: wrap;
     width: 600px;
-    justify-content: space-between;
 }
 
 #display {
+    display: flex;
     width: 600px;
     height: 150px;
     border-style: solid;
+    font-size: 50px;
+    justify-content:flex-end;
+    align-items: center;
 }
 
 button {
     width: 150px;
     height: 150px;
+    font-size: 50px;
+}
+
+#btn0 {
+    width: 450px;
+}
+
+#btn-equals, #btn-clear {
+    width: 300px;
 }
