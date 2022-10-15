@@ -18,12 +18,14 @@ function operate(func, a, b) {
     return func(a, b);
 }
 
+const display = document.querySelector("#display")
 const buttons = document.querySelectorAll("button");
 
 buttons.forEach((button) => {
     button.addEventListener("click", function(e) {
-        console.log(e.target.id);
+        if (e.target.className === "number") {
+            display.textContent += e.target.textContent;
+        }
     });
 });
 
-console.log(buttons);
