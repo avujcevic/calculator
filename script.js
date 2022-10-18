@@ -58,6 +58,12 @@ buttons.forEach((button) => {
                     break;
             }
         }
+
+        if (e.target.id === "btn-clear") {
+            display.textContent = "";
+            currentValue = 0;
+            storedValue = 0;
+        }
     });
 });
 
