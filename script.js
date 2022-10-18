@@ -1,5 +1,5 @@
 function add(a, b) {
-    return parseInt(a) + parseInt(b);
+    return parseFloat(a) + parseFloat(b);
 }
 
 function subtract(a, b) {
@@ -39,10 +39,24 @@ buttons.forEach((button) => {
         }
         
         if (e.target.id === "btn-equals") {
-            console.log(storedValue);
-            console.log(currentValue);
-            currentValue = operate(add, storedValue, currentValue);
-            display.textContent = currentValue;
+            switch(operator) {
+                case "btn-divide":
+                    currentValue = operate(divide, storedValue, currentValue);
+                    display.textContent = currentValue;
+                    break;
+                case "btn-multiply":
+                    currentValue = operate(multiply, storedValue, currentValue);
+                    display.textContent = currentValue;
+                    break;
+                case "btn-subtract":
+                    currentValue = operate(subtract, storedValue, currentValue);
+                    display.textContent = currentValue;
+                    break;
+                case "btn-add":
+                    currentValue = operate(add, storedValue, currentValue);
+                    display.textContent = currentValue;
+                    break;
+            }
         }
     });
 });
