@@ -42,7 +42,11 @@ buttons.forEach((button) => {
             switch(operator) {
                 case "btn-divide":
                     currentValue = operate(divide, storedValue, currentValue);
+                    if (currentValue === Infinity) {
+                        display.textContent = "Error";
+                    } else {
                     display.textContent = currentValue;
+                    }
                     break;
                 case "btn-multiply":
                     currentValue = operate(multiply, storedValue, currentValue);
